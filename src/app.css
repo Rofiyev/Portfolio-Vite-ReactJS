@@ -1,0 +1,169 @@
+/* Import google font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap");
+
+/*=== CSS variables ===*/
+:root {
+  /* colors */
+  --firstColor: #8a2ce2;
+  --titleColor: #3e3e3e;
+  --textColor: #808080;
+  --bodyColor: #ffffff;
+  --containerColor: #ededed;
+  --borderColor: #dedede;
+  --textWhite: #ffffff;
+
+  /* font and typography */
+  --bodyFont: "Open Sans", sans-serif;
+  --secondFont: "Poppins", sans-serif;
+
+  --bigFontSize: 56px;
+  --h1FontSize: 50px;
+  --h2FontSize: 32px;
+  --h3FontSize: 24px;
+  --largeFontSize: 18px;
+  --normalFontSize: 16px;
+  --smallFontSize: 15px;
+  --smallFontSize: 15px;
+  --smallerFontSize: 14px;
+
+  /* font weight */
+  --fontWeight-400: 400;
+  --fontWeight-500: 500;
+  --fontWeight-600: 600;
+  --fontWeight-700: 700;
+  --fontWeight-800: 800;
+}
+
+/*=== BASE ===*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--borderColor);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--firstColor);
+  border-radius: 100px;
+}
+
+body,
+input,
+textarea {
+  font-family: var(--bodyFont);
+  font-size: var(--normalFontSize);
+  font-weight: var(--fontWeight-500);
+}
+
+body {
+  background-color: var(--bodyColor);
+  color: var(--textColor);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--titleColor);
+  font-family: var(--secondFont);
+  font-weight: var(--fontWeight-700);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*=== Reusable CSS ===*/
+.container {
+  max-width: 1140px;
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.section {
+  padding-block: 70px;
+}
+
+.section__title {
+  font-size: var(--bigFontSize);
+  font-weight: var(--fontWeight-800);
+  font-family: var(--secondFont);
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section__title span {
+  color: var(--firstColor);
+}
+
+.button {
+  display: inline-block;
+  color: var(--textColor);
+  border: 1px solid var(--firstColor);
+  padding: 15px 70px 15px 35px;
+  border-radius: 35px;
+  font-family: var(--secondFont);
+  font-size: var(--smallFontSize);
+  font-weight: var(--fontWeight-500);
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+}
+
+.button:hover {
+  color: var(--textWhite);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--firstColor);
+  transform: translateX(100%);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover::before {
+  transform: translateX(0%);
+}
+
+.button__icon {
+  background-color: var(--firstColor);
+  position: absolute;
+  inset-block: -2px;
+  right: -0.5%;
+  width: 55px;
+  border-radius: 50%;
+  color: var(--textWhite);
+  font-size: var(--largeFontSize);
+  display: grid;
+  place-items: center;
+}
