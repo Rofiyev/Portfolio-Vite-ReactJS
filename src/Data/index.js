@@ -145,3 +145,38 @@ export const skillsData = [
     percentage: '35',
   },
 ];
+
+export const theme = [
+  {
+    id: 1,
+    color: '#13d0ff',
+  },
+  {
+    id: 2,
+    color: '#f72b1d',
+  },
+  {
+    id: 3,
+    color: '#8a2ce2',
+  },
+  {
+    id: 4,
+    color: '#6941e1',
+  },
+  {
+    id: 5,
+    color: '#d9a520',
+  },
+  {
+    id: 6,
+    color: '#ef6796',
+  },
+  {
+    id: 7,
+    color: '#99cd32',
+  },
+  {
+    id: 8,
+    color: '#fa5a0f',
+  },
+]

@@ -50,6 +50,7 @@
   background-color: var(--containerColor);
   padding: 6px;
   cursor: pointer;
+  z-index: 100000;
 }
 .icon {
   width: 100%;

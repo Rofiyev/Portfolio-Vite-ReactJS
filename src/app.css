@@ -34,6 +34,14 @@
   --fontWeight-800: 800;
 }
 
+.dark-theme {
+  --titleColor: hsl(0, 0%, 100%);
+  --textColor: hsl(0, 0%, 80%);
+  --bodyColor: hsl(0, 0%, 7%);
+  --containerColor: hsl(0, 1%, 17%);
+  --borderColor: hsl(0, 0%, 15%);
+}
+
 /*=== BASE ===*/
 * {
   padding: 0;
@@ -166,4 +174,10 @@ img {
   font-size: var(--largeFontSize);
   display: grid;
   place-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .section {
+    padding-block: 10px;
+  }
 }
